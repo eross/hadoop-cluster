@@ -1,0 +1,11 @@
+namenode:
+  image: uhopper/hadoop-namenode
+  hostname: ercluster
+  container_name: ercluster
+  domainname: hadoop
+  net: hadoop
+  volumes:
+    - ercluster:/hadoop/dfs/name
+  environment:
+    - GANGLIA_HOST=localhost
+    - CLUSTER_NAME=ercluster
