@@ -6,6 +6,9 @@ namenode:
   net: hadoop
   volumes:
     - ercluster:/hadoop/dfs/name
+  ports:
+    - "50070:50070"
+    - "8020:8020"
   environment:
     - GANGLIA_HOST=localhost
     - CLUSTER_NAME=ercluster
