@@ -1,0 +1,10 @@
+spark:
+  image: uhopper/hadoop-spark
+  hostname: spark
+  container_name: spark
+  domainname: hadoop
+  net: hadoop
+  environment:
+     - CORE_CONF_fs_defaultFS=hdfs://ercluster:8020
+     - YARN_CONF_yarn_resourcemanager_hostname=resourcemanager
+  command:  tail -f /var/log/dmesg
